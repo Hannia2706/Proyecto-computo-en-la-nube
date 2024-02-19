@@ -13,8 +13,8 @@ Se presenta el proyecto final para la materia de cómputo distribuido por estudi
 
 # Introducción. 
 El proyecto tiene como objetivo recopilar y analizar datos de Kraken, una de las principales plataformas de intercambio de criptomonedas. Nos centramos en aspectos importantes como el volumen de operaciones, la capitalización de mercado y eventos clave que pueden afectar el comportamiento algunas de las principales criptomonedas. La API de Kraken proporciona una fuente de información confiable y accesible que brinda acceso eficiente a datos precisos y actualizados.
-En este proyecto se estudiarán las criptomonedas más importantes del mercado,su evolución en el tiempo, patrones y tendencias, y examinaremos cómo eventos relevantes han afectado el valor y la adopción de las criptomonedas.
-El proyecto tiene como objetivo proporcionar una plataforma integral para comprender y analizar las principales criptomonedas del mercado utilizando la API de Kraken, con datos confiables y actualizados. De esta manera, esperamos contribuir al conocimiento y a la toma de decisiones informadas en el mundo de las criptomonedas.
+
+En este proyecto se estudiarán las criptomonedas más importantes del mercado,su evolución en el tiempo, patrones y tendencias, y examinaremos cómo eventos relevantes han afectado el valor y la adopción de las criptomonedas.Así como proporcionar una plataforma integral para comprender y analizar las principales criptomonedas del mercado utilizando la API de Kraken, con datos confiables y actualizados. De esta manera, esperamos contribuir al conocimiento y a la toma de decisiones informadas en el mundo de las criptomonedas.
 
 # Justificación.
 # Hipótesis.
