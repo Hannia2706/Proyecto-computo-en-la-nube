@@ -8,6 +8,9 @@ Hannia Ashley Alvarado Galván: haash2706@gmail.com
 
 Jorge Humberto Bolaños Ruiz: Jorgehbr23@gmail.com
 
+Leo García
+leo261102leo@gmail.com
+
 ## Licencia 
 
  GNU General Public License 3.0
@@ -52,5 +55,5 @@ Analizar la relación entre las películas del género de ficción y las calific
 - Api a utilizar : 
   - OMDb API
 
-nota: se incluirán herramientas conforme se avance en el proyecto. 
+Con el paso del proyecto agregaremos nuevas herramientas que aún no hemos utilizado. 
 
