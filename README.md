@@ -1,10 +1,10 @@
-# Predicción de Exito de una Película
+# Predicción de Exito de una Película 📽️🍿
 
 ## Descripción
 
 A través de información de peliculas extraida de https://omdbapi.com/ realizaremos una analisis de datos para encontrar relación entre género, trama y exito en las calificaciones que son otorgadas de páginas como Rotten Tomatoes, IMDb;... Para que el usuario pueda ingresar los datos de su película (genero, trama) y en base a estos predecir la tasa de éxito en sus calificaciones en las páginas de críticas.
 
-## Contacto 
+## Contacto 📬
 
 Hannia Ashley Alvarado Galván: haash2706@gmail.com
 
@@ -15,7 +15,7 @@ Leo García: leo261102leo@gmail.com
 ## Licencia 
 
  GNU General Public License 3.0
-## Afiliaciones
+## Afiliaciones 👥
 
 Se presenta el proyecto final para la materia de cómputo distribuido por estudiantes en la carrera de Tecnologías para la Información en Ciencias, en la Universidad Nacional Autónoma de México (UNAM), ENES Unidad Morelia. 
 
