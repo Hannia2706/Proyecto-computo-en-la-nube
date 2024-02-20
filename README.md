@@ -9,6 +9,7 @@ Hannia Ashley Alvarado Galván: haash2706@gmail.com
 Jorge Humberto Bolaños Ruiz: Jorgehbr23@gmail.com
 
 Leo García:
+
 leo261102leo@gmail.com
 
 ## Licencia 
