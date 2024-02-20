@@ -34,17 +34,19 @@ Analizar la relación entre las películas del género de ficción y las calific
 
 ## Objetivos Particulares.
 
-## Herramientas de Software a Utilizar
 
-Lenguaje de programación: Python 3
+## Herramientas de Software
 
-*Pandas
+- Lenguaje de programación:
+  - Python 3
 
-*JSON
+  
+- Bibliotecas:
+  - Pandas
+  - JSON
 
-Api a utilizar : OMDb API.
+- Api a utilizar : 
+  - OMDb API
 
 nota: se incluirán herramientas conforme se avance en el proyecto. 
-
-## Arquitectura: Adquisición, Almacenamiento, Procesamiento y Publicación
 
