@@ -1,6 +1,8 @@
-# Proyecto-computo-en-la-nube
+# Predicción de Exito de una Película
 
-## Descripción 
+## Descripción
+
+A través de información de peliculas extraida de https://omdbapi.com/ realizaremos una analisis de datos para encontrar relación entre género, trama y exito en las calificaciones que son otorgadas de páginas como Rotten Tomatoes, IMDb;... Para que el usuario pueda ingresar los datos de su película (genero, trama) y en base a estos predecir la tasa de éxito en sus calificaciones en las páginas de críticas.
 
 ## Contacto 
 
@@ -56,3 +58,24 @@ Analizar la relación entre las películas del género de ficción y las calific
 
 Con el paso del proyecto agregaremos nuevas herramientas que aún no hemos utilizado. 
 
+## Método de adquisión de datos
+
+Este método sirve para extraer datos a través de un identificador, en este caso, el título de la película.
+
+import requests
+
+base_url = "https://www.omdbapi.com/"
+api_key = "441032b4"  # Reemplaza "tu_api_key" con tu clave de API
+
+parameters = {
+    "apikey": "441032b4",
+    "t": "Titanic"
+}
+
+response = requests.get(base_url, params=parameters)
+
+if response.status_code == 200:
+    data = response.json()
+    print(data)
+else:
+    print("Error al hacer la solicitud:", response.status_code)
