@@ -22,6 +22,9 @@ Como parte del programa de la materia de cómputo distribuido, se decidió reali
 En la actualidad, se dispone el acceso a conjunto masivo de datos donde se puede extraer información, en este contexto, se planea hacer un análisis en las películas del género de ficción y su relación con las calificaciones de los usuarios a lo largo del tiempo. Al estudiar esto, se pueden identificar tendencias , evaluar el impacto de diferentes factores en la recepción de las películas para la toma de decisiones. 
 
 # Hipótesis.
+
+Se busca analizar si existe una correlación entre las películas del género de ficción y las calificaciones de los usuarios a lo largo del tiempo, se especula que las películas más recientes con una mayor tecnología en efectos especiales tengan una influencia en la valoración de los usuarios a las películas de ficción.
+
 # Objetivo General.
 # Objetivos Particulares.
 # Herramientas de Software a Utilizar
