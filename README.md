@@ -79,3 +79,7 @@ Este método sirve para extraer datos a través de un identificador, en este cas
            print(data)
        else:
            print("Error al hacer la solicitud:", response.status_code)
+
+## Arquitectura Computacional
+
+Nuestra arquitectura computacional para nuestro proyecto.
