@@ -1,9 +1,17 @@
-import ccxt
-
-api_key = 'kzf06DzfZB++i15ni8lHDcAIywSC0jcG57uEAQQsEHEs1fbwweb/h2Wf'
-api_secret = 'aRlJovwQrvr3un+9+rxmlQhX+uczXTbd2Y/PVypNACwi7eAxViJ39D0koGy+RBlfiel6F4aQvTZDQpxR8j0rJg=='
-
-exchange = ccxt.kraken({'apiKey': api_key, 'secret': api_secret})
-
-datos_bitcoin = exchange.fetch_ticker('BTC/USD')#['last'] <---- que dato quieres extraer
-print("Data BTC: ", datos_bitcoin)
+   import requests
+   
+   base_url = "https://www.omdbapi.com/"
+   api_key = "441032b4"  # Reemplaza "tu_api_key" con tu clave de API
+   
+   parameters = {
+       "apikey": "441032b4",
+       "t": "Titanic"
+   }
+   
+   response = requests.get(base_url, params=parameters)
+   
+   if response.status_code == 200:
+       data = response.json()
+       print(data)
+   else:
+       print("Error al hacer la solicitud:", response.status_code)
