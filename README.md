@@ -18,6 +18,9 @@ Como parte del programa de la materia de cómputo distribuido, se decidió reali
 
 
 # Justificación.
+
+En la actualidad, se dispone el acceso a conjunto masivo de datos donde se puede extraer información, en este contexto, se planea hacer un análisis en las películas del género de ficción y su relación con las calificaciones de los usuarios a lo largo del tiempo. Al estudiar esto, se pueden identificar tendencias , evaluar el impacto de diferentes factores en la recepción de las películas para la toma de decisiones. 
+
 # Hipótesis.
 # Objetivo General.
 # Objetivos Particulares.
