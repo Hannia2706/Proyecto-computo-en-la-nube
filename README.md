@@ -34,6 +34,10 @@ Analizar la relación entre las películas del género de ficción y las calific
 
 ## Objetivos Particulares.
 
+1. Obtener datos de películas del género de ficción utilizando la API de OMDb.
+2. Procesar los datos para identificar tendencias y correlaciones entre el género de ficción y las calificaciones de los usuarios.
+3. Analizar el impacto de diferentes factores, como la tecnología en efectos especiales, en la recepción de las películas de ficción.
+
 
 ## Herramientas de Software
 
