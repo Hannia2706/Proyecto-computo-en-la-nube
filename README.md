@@ -83,3 +83,6 @@ Este método sirve para extraer datos a través de un identificador, en este cas
 ## Arquitectura Computacional
 
 Nuestra arquitectura computacional para nuestro proyecto.
+
+![Diagrama de Flujo Desarrollo de Procesos Moderno Beige y Rosa ](https://github.com/Hannia2706/Proyecto-computo-en-la-nube/assets/124711181/366a0312-781d-4726-970a-360432181cee)
+
