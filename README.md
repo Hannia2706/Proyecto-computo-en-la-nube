@@ -31,5 +31,12 @@ Se busca analizar si existe una correlación entre las películas del género de
 # Objetivo General.
 # Objetivos Particulares.
 # Herramientas de Software a Utilizar
+
+Lenguaje de programación: Python 3
+*Pandas
+*JSON
+Api a utilizar : OMDb API 
+nota: se incluirán herramientas conforme se avance en el proyecto. 
+
 # Arquitectura: Adquisición, Almacenamiento, Procesamiento y Publicación
 
