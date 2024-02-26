@@ -2,7 +2,7 @@
 
 ## Descripción
 
-A través de información de peliculas extraida de https://omdbapi.com/ realizaremos una analisis de datos para encontrar relación entre el género ficción, trama y exito en las calificaciones que son otorgadas de páginas como Rotten Tomatoes, IMDb;... Para que el usuario pueda ingresar los datos de su película (genero ficción, trama) y en base a estos predecir la tasa de éxito en sus calificaciones en las páginas de críticas.
+A través de información de peliculas extraida de https://omdbapi.com/ realizaremos una analisis de datos 
 
 ## Contacto 📬
 
