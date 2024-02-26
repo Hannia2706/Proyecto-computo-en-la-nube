@@ -1,8 +1,8 @@
-# Predicción de Exito de una Película 📽️🍿
+# ¿Qué película me gusta? 📽️🍿
 
 ## Descripción
 
-A través de información de peliculas extraida de https://omdbapi.com/ realizaremos una analisis de datos 
+A través de información de peliculas extraida de https://omdbapi.com/ realizaremos una analisis de datos para calcular el nivel de afinidad con una serie de películas. Utilizaremos un algoritmo que determine la afinidad de una persona hacia ciertas películas con la finalidad de facilitar al usuario una recomendación más precisa de películas acuerdo a sus gustos.
 
 ## Contacto 📬
 
@@ -10,7 +10,7 @@ Hannia Ashley Alvarado Galván: haash2706@gmail.com
 
 Jorge Humberto Bolaños Ruiz: Jorgehbr23@gmail.com
 
-Leo García: leo261102leo@gmail.com
+Edgar Leonardo García Zavala: leo261102leo@gmail.com
 
 ## Licencia 
 
@@ -21,33 +21,35 @@ Se presenta el proyecto final para la materia de cómputo distribuido por estudi
 
 ## Introducción 🎈
 
-Como parte del programa de la materia de cómputo distribuido, se decidió realizar un proyecto haciendo uso de una api para un análisis de datos de un tema de interés del equipo, en este caso se usara la api de OMDb (The Open Movie Database), se trata de un servicio web para obtener información de películas, como puede ser el género, director, actores, descripción, evaluaciones, lo cual es donde se tendrá un mayor enfoque.
+Como parte del programa de la materia de cómputo distribuido, se decidió realizar un proyecto haciendo uso de una api para un análisis de datos de un tema de interés del equipo, en este caso se usara la api de OMDb (The Open Movie Database). Es un servicio web para obtener información de películas, como puede ser el género, director, actores, descripción, evaluaciones, lo cual es donde se tendrá un mayor enfoque.
 
 
 ## Justificación 👩‍⚖️
 
-En la actualidad, se dispone el acceso a conjunto masivo de datos donde se puede extraer información, en este contexto, se planea hacer un análisis en las películas del género de ficción y su relación con las calificaciones de los usuarios a lo largo del tiempo. Al estudiar esto, se pueden identificar tendencias , evaluar el impacto de diferentes factores en la recepción de las películas para la toma de decisiones. 
+En la actualidad, se dispone el acceso a conjunto masivo de películas de las que se puede extraer información, en este contexto, para el usuario puede resultar agobiante la elección de un título cinematográfico. Nosotros resolveremos esta situación haciendo que se le facilite una lista de recomendaciones adecuadas a sus gustos.
 
 ## Hipótesis 🦛
 
-Se busca analizar si existe una correlación entre las películas del género de ficción y las calificaciones de los usuarios a lo largo del tiempo, se especula que las películas más recientes con una mayor tecnología en efectos especiales tengan una influencia en la valoración de los usuarios a las películas.
+Se busca crear un microservicio al cual un usuario pueda acceder a una grandiosa lista de recomendaciones afines al gusto del usuario.
+A través de los datos obtenios del usuario se logrará calcular la afinidad que tiene con cierto tipo de películas que se recomedarán de acuerdo a las de preferencia del usuario.  
+
 
 ## Objetivo General 🎯
 
-Analizar la relación entre las películas del género de ficción y las calificaciones de los usuarios a lo largo del tiempo utilizando datos obtenidos de la API de OMDb.
+Analizar la relación entre las películas escogidas por el usuario y otras películas que se recomendaran utilizando datos obtenidos de la API de OMDb, considerando las evaluaciones que nos arroja la página. 
 
 ## Objetivos Particulares 🎯
 
-1. Obtener datos de películas del género de ficción utilizando la API de OMDb.
-2. Procesar los datos para identificar tendencias y correlaciones entre el género de ficción y las calificaciones de los usuarios.
-3. Analizar el impacto de diferentes factores, como la tecnología en efectos especiales, en la recepción de las películas de ficción.
+1. Crear una base de datos a través de la API de OMDb que contenga el título, evaluaciones por diferentes páginas, y el género.
+2. Procesar la información obtenida en tiempo real del usuario de sus gustos
+3. Implementar un algoritmo que calcule la afinidad de un usuario hacia ciertas películas.
+4. Crear un interfaz que ayude al usuario a interactuar con nuestro servicio.
 
 
 ## Herramientas de Software ⚙️
 
 - Lenguaje de programación:
   - Python 3
-
   
 - Bibliotecas:
   - Pandas
