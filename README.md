@@ -2,7 +2,7 @@
 
 ## Descripción
 
-A través de información de peliculas extraida de https://omdbapi.com/ realizaremos una analisis de datos para calcular el nivel de afinidad con una serie de películas. Utilizaremos un algoritmo que determine la afinidad de una persona hacia ciertas películas con la finalidad de facilitar al usuario una recomendación más precisa de películas acuerdo a sus gustos.
+A través de información de peliculas extraida de https://omdbapi.com/ realizaremos una analisis de datos para calcular el nivel de afinidad con una serie de películas. Utilizaremos un algoritmo llamado filtrado colaborativo que determine la afinidad de una persona hacia ciertas películas con la finalidad de facilitar al usuario una recomendación más precisa de películas acuerdo a sus gustos.
 
 ## Contacto 📬
 
