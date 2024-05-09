@@ -54,6 +54,7 @@ Analizar la relación entre las películas escogidas por el usuario y otras pel�
 - Bibliotecas:
   - Pandas
   - JSON
+  - Requests
 
 - Api a utilizar : 
   - OMDb API
