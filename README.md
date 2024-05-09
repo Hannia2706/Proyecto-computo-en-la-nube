@@ -58,7 +58,7 @@ Analizar la relación entre las películas escogidas por el usuario y otras pel�
 - Api a utilizar : 
   - OMDb API
 
-Con el paso del proyecto agregaremos nuevas herramientas que aún no hemos utilizado. 
+- Django
 
 ## Método de adquisión de datos 🧑‍💻
 
