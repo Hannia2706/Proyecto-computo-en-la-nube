@@ -1,1 +1,33 @@
+import pandas as pd
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 
+# Simulador de Dataframe
+df_data = {
+    'Titulo': ['Titanic', 'Batman', 'Superman'],
+    'Calificacion1': [1, 2, 0],
+    'Calificacion2': [0, 1, 2],
+    'Calificacion3': [2, 1, 1]
+}
+df = pd.DataFrame(df_data)
+
+calificaciones = df.drop('Titulo', axis=1)
+similitud_peliculas = cosine_similarity(calificaciones)
+
+def recomendar_peliculas(peliculas_calificaciones, n=6):
+    input_df = pd.DataFrame(peliculas_calificaciones, columns=['Titulo', 'Calificacion'])
+    peliculas_gustadas = input_df[input_df['Calificacion'] > 0]['Titulo']
+    calificaciones_avg = input_df.groupby('Titulo')['Calificacion'].mean()
+    calificaciones_usuario = calificaciones_avg[peliculas_gustadas]
+    sim_scores = np.dot(similitud_peliculas, calificaciones_usuario)
+    peliculas_vistas = input_df['Titulo']
+    idx_not_vistas = ~df['Titulo'].isin(peliculas_vistas)
+    idx_sorted = np.argsort(sim_scores)[::-1]
+    idx_recomendadas = idx_sorted[idx_not_vistas][:n]
+    return df.loc[idx_recomendadas, 'Titulo']
+
+# Ejemplo de recomendación de películas
+entrada_usuario = [('Titanic', 1), ('Batman', 2), ('Superman', 0)]
+recomendaciones = recomendar_peliculas(entrada_usuario)
+print("Películas recomendadas:")
+print(recomendaciones)
