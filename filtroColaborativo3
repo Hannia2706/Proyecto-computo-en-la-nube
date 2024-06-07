@@ -1,0 +1,35 @@
+import sqlite3
+import pandas as pd
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+
+try:
+    conn = sqlite3.connect('quepeliculamegusta.sql')
+    query = "SELECT Titulo, Calificacion1, Calificacion2, Calificacion3 FROM peliculas"
+    df = pd.read_sql_query(query, conn)
+    conn.close()
+except sqlite3.Error as e:
+    print("Error al conectar a la base de datos SQLite:", e)
+
+if 'id' in df.columns:
+    df.drop('id', axis=1, inplace=True)
+
+calificaciones = df.drop('Titulo', axis=1)
+
+calificaciones.fillna(0, inplace=True)
+
+similitud_peliculas = cosine_similarity(calificaciones)
+
+def recomendar_peliculas(peliculas_calificaciones, n=6):
+    input_df = pd.DataFrame(peliculas_calificaciones, columns=['Titulo', 'Calificacion'])
+    peliculas_gustadas = input_df[input_df['Calificacion'] > 0]['Titulo']
+    calificaciones_avg = input_df.groupby('Titulo')['Calificacion'].mean()
+    calificaciones_usuario = calificaciones_avg.reindex(df['Titulo']).fillna(0)
+    sim_scores = np.dot(similitud_peliculas, calificaciones_usuario)
+    idx_sorted = np.argsort(sim_scores)[::-1]
+    return df.loc[idx_sorted[:n], 'Titulo']
+
+entrada_usuario = [('Titanic', 1), ('Batman', 2), ('Superman', 0)]
+recomendaciones = recomendar_peliculas(entrada_usuario)
+print("Películas recomendadas:")
+print(recomendaciones)
