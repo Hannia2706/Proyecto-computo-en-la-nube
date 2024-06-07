@@ -1,0 +1,24 @@
+/* Referencias */
+/* https://developer.mozilla.org/es/docs/Web/CSS/object-fit */
+
+/* Contenedor de las imágenes */
+
+.image-container {
+  width: 250px;       /* Ancho de las imágenes */
+  height: 350px;      /* Altura de las imágenes */
+  overflow: hidden;   /* Para que las imágenes no se salgan del contenedor */
+  position: relative; /* Para que los elementos hijos se posicionen con respecto a este contenedor */
+}
+
+/* Imágenes */
+
+.image-container img {
+  width: 100%;             /* Para que la imagen ocupe todo el contenedor */
+  height: 100%;            /* Para que la imagen ocupe todo el contenedor */
+  object-fit: cover;       /* Para que la imagen se ajuste al tamaño del contenedor */
+  object-position: center; /* Para centrar la imagen */
+}
+
+label {
+  margin: 10px; /* Margen entre los elementos */
+}

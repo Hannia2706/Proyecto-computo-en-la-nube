@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-3 text-center">
+    <!-- Título -->
+    <p class="fs-2">¿Cuál te gusta más?</p>
+    <hr>
+
+    <!-- Películas -->
+    <div class="row justify-content-center pb-3">
+        <div class="col-md-3">
+            <!-- Película 1 -->
+            <div class="d-flex flex-column align-items-center">
+
+                <!-- Título de la película 1 -->
+                <p class="fs-4" id="movie1">{{ movies.0.0 }}</p>
+
+                <!-- Imagen de la película 1 -->
+                <div class="image-container">
+                    <img src="{% static 'img/' %}{{ movies.0.1 }}" class="rounded" alt="Movie 1" id="img1">
+                </div>
+                <br>
+
+                <!-- Botón para seleccionar la película 1 -->
+                <button type="button" class="btn btn-danger" data-movie="{{ movies.0.0 }}" id="left">🤍</button>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <!-- Película 2 -->
+            <div class="d-flex flex-column align-items-center">
+
+                <!-- Título de la película 2 -->
+                <p class="fs-4" id="movie2">{{ movies.1.0 }}</p>
+
+                <!-- Imagen de la película 2 -->
+                <div class="image-container">
+                    <img src="{% static 'img/' %}{{ movies.1.1 }}" class="rounded" alt="Movie 2" id="img2">
+                </div>
+                <br>
+
+                <!-- Botón para seleccionar la película 2 -->
+                <button type="button" class="btn btn-danger" data-movie="{{ movies.1.0 }}" id="right">🤍</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Refercias:
+    // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    // https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
+    // https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+
+    // Creamos un arreglo para guardar las películas seleccionadas
+    let selectedMovies = [];
+
+    // Agregamos un evento click a los botones de la película 1
+    document.getElementById('left').addEventListener('click', function () {
+        selectMovie(this);
+    });
+
+    // Agregamos un evento click a los botones de la película 2
+    document.getElementById('right').addEventListener('click', function () {
+        selectMovie(this);
+    });
+
+    // Función para seleccionar una película
+    function selectMovie(button) {
+        // Obtenemos el nombre de la película
+        const movieName = button.getAttribute('data-movie');
+
+        // Agregamos la película a la lista de películas seleccionadas
+        selectedMovies.push(movieName);
+
+        // Verificamos si ya se seleccionaron 6 películas
+        if (selectedMovies.length >= 6) {
+
+            // En caso de que sí, enviamos las películas seleccionadas
+            sendSelectedMovies();
+        } else {
+
+            // En caso de que no, obtenemos las nuevas películas
+            updateMovies();
+        }
+    }
+
+    // Función para obtener las nuevas películas y actualizar la vista
+    // Referencia: https://es.stackoverflow.com/questions/182011/problema-con-instrucci%C3%B3n-fetch
+    function updateMovies() {
+        // Obtenemos las nuevas películas llamando a la vista get_new_movies
+        fetch('/get_new_movies/')
+
+            // La respuesta que nos regresa la vista get_new_movies la convertimos a JSON
+            .then(response => response.json())
+
+            // En caso de éxito, actualizamos la vista con las nuevas películas
+            .then(data => {
+
+                // Guardamos las nuevas películas en una variable
+                const movies = data.movies;
+
+                // Actualizamos el título y la imagen de la película 1
+                document.getElementById('movie1').textContent = movies[0][0];
+                document.getElementById('img1').src = "{% static 'img/' %}" + movies[0][1];
+
+                // Actualizamos el atributo data-movie del botón de la película 1
+                document.getElementById('left').setAttribute('data-movie', movies[0][0]);
+
+                // Actualizamos el título y la imagen de la película 2
+                document.getElementById('movie2').textContent = movies[1][0];
+                document.getElementById('img2').src = "{% static 'img/' %}" + movies[1][1];
+
+                // Actualizamos el atributo data-movie del botón de la película 2
+                document.getElementById('right').setAttribute('data-movie', movies[1][0]);
+            })
+
+            // En caso de error, mostramos un mensaje en la consola
+            .catch(error => console.error('Error fetching new movies:', error));
+    }
+
+    // Función para enviar las películas seleccionadas
+    // Referencia: https://es.stackoverflow.com/questions/182011/problema-con-instrucci%C3%B3n-fetch
+    function sendSelectedMovies() {
+        // Creamos un formulario
+        const formData = new FormData();
+
+        // Agregamos las películas seleccionadas al formulario
+        selectedMovies.forEach(movie => {
+            formData.append('movies[]', movie);
+        });
+
+        // Enviamos las películas seleccionadas a la vista de películas seleccionadas
+        fetch('/selected_movies/', {
+            method: 'POST',
+            body: formData,
+        })
+            // La respuesta que nos regresa la vista de películas seleccionadas
+            // la convertimos a JSON
+            .then(response => response.json())
+
+            // En caso de éxito, redirigimos a la vista de películas recomendadas
+            .then(data => {
+                if (data.status === 'success') {
+                    // Construimos la URL con los parámetros de las películas recomendadas
+                    const params = new URLSearchParams();
+
+                    // Agregamos los parámetros de las películas recomendadas a la URL
+                    params.append('movie1', data.recommended_movies.movie1);
+                    params.append('movie1_img', data.recommended_movies.movie1_img);
+                    params.append('movie2', data.recommended_movies.movie2);
+                    params.append('movie2_img', data.recommended_movies.movie2_img);
+
+                    // Redirigimos a la vista de películas recomendadas con los parámetros
+                    window.location.href = `/recommended_movies/?${params.toString()}`;
+                }
+            })
+
+            // En caso de error, mostramos un mensaje en la consola
+            .catch(error => console.error('Error sending selected movies:', error));
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-3 text-center">
+    <div class="row justify-content-center pb-3">
+        <!-- Verificamos si hay películas -->
+        {% if movies %}
+
+        <div class="col-md-3">
+            <!-- Película 1 -->
+            <div class="d-flex flex-column align-items-center">
+
+                <!-- Título de la película 1 -->
+                <p class="fs-4">{{ movies.movie1 }}</p>
+
+                <!-- Imagen de la película 1 -->
+                <div class="image-container justify-content-center">
+                    <img src="{% static 'img/' %}{{ movies.movie1_img }}" class="rounded" alt="Movie 1">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <!-- Película 2 -->
+            <div class="d-flex flex-column align-items-center">
+
+                <!-- Título de la película 2 -->
+                <p class="fs-4">{{ movies.movie2 }}</p>
+
+                <!-- Imagen de la película 2 -->
+                <div class="image-container justify-content-center">
+                    <img src="{% static 'img/' %}{{ movies.movie2_img }}" class="rounded" alt="Movie 2">
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Boton para regresar al inicio -->
+    <a class="btn btn-outline-primary" href="{% url 'home' %}" role="button">Regresar al inicio</a>
+</div>
+{% endblock %}

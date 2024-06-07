@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-3 text-center">
+    <h1 class="display-1">¡Bienvenido a Tinder Movies!</h1>
+
+    <p class="fs-4">¿Listo para encontrar tu próxima película favorita?</p>
+
+    <a class="btn btn-outline-primary" href="{% url 'tinder_movies' %}" role="button">Ir a Tinder Movies</a>
+</div>
+{% endblock %}
