@@ -45,6 +45,13 @@ Analizar la relación entre las películas escogidas por el usuario y otras pel�
 3. Implementar un algoritmo que calcule la afinidad de un usuario hacia ciertas películas.
 4. Crear un interfaz que ayude al usuario a interactuar con nuestro servicio.
 
+## Conclusión 🎈
+
+En este proyeto llegamos a resolver muchos problemas que no sabíamos que existían. Fue un proceso lleno de estudio y problemas.
+
+A través de la API de IMDB (https://www.omdbapi.com/) recogimos una lista de películas extensa y sus calificaciones. Organizamos los datos. Agregamos nuevas calificaciones. Hicimos una interfaz para que el usuario pueda calificar películas. Obtenemos sus calificaciones. Creamos un algoritmo de filtro colaborativo para recomendar películas en base a la calificación del usuario. Le mostramos la lista de películas recomendadas en base a su gusto.
+
+Creamos un buen microservicio para recomendar películas al usuario en base a unos cuantos gustos de películas.
 
 ## Herramientas de Software ⚙️
 
